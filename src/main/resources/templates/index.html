@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Activity Scheduler</title>
+</head>
+<body>
+
+<form id="activityForm" th:action="@{/scheduleActivity}" method="get">
+    <label for="activity">Choose a sport activity:</label>
+    <select id="activity" name="activity">
+        <option value="Running">Running</option>
+        <option value="Cycling">Cycling</option>
+        <option value="Swimming">Swimming</option>
+        <option value="Hiking">Hiking</option>
+        <option value="Yoga">Yoga</option>
+    </select>
+    <br>
+    <button type="submit">Schedule Activity</button>
+</form>
+
+<p id="scheduledActivity" th:text="${scheduledActivity}"></p>
+
+</body>
+</html>
